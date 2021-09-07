@@ -143,12 +143,12 @@ export default function NavbarDropdown() {
       >
         <Avatar
           alt="..."
-          src={require("assets/img/theme/team-4-800x800.jpg").default}
+          src={require("assets/img/theme/img-2-1200x1000.jpg").default}
           classes={{
             root: classes.avatarRoot,
           }}
         />
-        <Hidden smDown>Jessica Jones</Hidden>
+        <Hidden smDown>Abel</Hidden>
       </Button>
       {renderMenu}
     </>
