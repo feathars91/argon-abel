@@ -15,10 +15,10 @@ export class Tbl extends Component {
 
   //option 1
   async getUsersData() {
-//    const res = await axios.get("https://6ewrylky9f.execute-api.us-east-2.amazonaws.com/dev/getcontacts");
-  const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+    const res = await axios.get("https://6ewrylky9f.execute-api.us-east-2.amazonaws.com/dev/getcontacts");
+  //const res = await axios.get("https://jsonplaceholder.typicode.com/users");
     console.log(res.data);
-    this.setState({ loading: false, users: res.data });
+    this.setState({ loading: false, users: res.data.data });
     
   }
 
