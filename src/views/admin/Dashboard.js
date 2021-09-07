@@ -25,6 +25,7 @@ import TableRow from "@material-ui/core/TableRow";
 //import ArrowDownward from "@material-ui/icons/ArrowDownward";
 //import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import Tbl from './Table.js'
+import Tbl2 from './Tableadmin.js'
 // core components
 import Header from "components/Headers/Header.js";
 
@@ -91,7 +92,7 @@ function Dashboard() {
                         variant="h3"
                         marginBottom="0!important"
                       >
-                        Page visits
+                        Contacts
                       </Box>
                     </Grid>
                     <Grid item xs="auto">
@@ -114,6 +115,60 @@ function Dashboard() {
                 classes={{ root: classes.cardHeaderRoot }}
               ></CardHeader>
               <Tbl />
+                        </Card>
+          </Grid>
+        </Grid>
+                <Grid container component={Box} marginTop="3rem">
+          <Grid
+            item
+            xs={12}
+            xl={12}
+            component={Box}
+            marginBottom="3rem!important"
+            classes={{ root: classes.gridItemRoot }}
+          >
+            <Card
+              classes={{
+                root: classes.cardRoot,
+              }}
+            >
+              <CardHeader
+                subheader={
+                  <Grid
+                    container
+                    component={Box}
+                    alignItems="center"
+                    justifyContent="space-between"
+                  >
+                    <Grid item xs="auto">
+                      <Box
+                        component={Typography}
+                        variant="h3"
+                        marginBottom="0!important"
+                      >
+                        Admins
+                      </Box>
+                    </Grid>
+                    <Grid item xs="auto">
+                      <Box
+                        justifyContent="flex-end"
+                        display="flex"
+                        flexWrap="wrap"
+                      >
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          size="small"
+                        >
+                          See all
+                        </Button>
+                      </Box>
+                    </Grid>
+                  </Grid>
+                }
+                classes={{ root: classes.cardHeaderRoot }}
+              ></CardHeader>
+              <Tbl2 />
                         </Card>
           </Grid>
         </Grid>

@@ -20,6 +20,7 @@ import NavbarDropdown from "components/Dropdowns/NavbarDropdown.js";
 import routes from "routes.js";
 
 import componentStyles from "assets/theme/layouts/admin.js";
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
 const useStyles = makeStyles(componentStyles);
 
@@ -110,4 +111,6 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+//export default Admin;
+
+export default withAuthenticator(Admin);
