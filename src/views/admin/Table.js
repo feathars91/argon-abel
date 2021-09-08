@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import "datatables.net-dt/css/jquery.dataTables.min.css";
-import "datatables.net-editor-dt/css/editor.dataTables.min.css";
+//import "datatables.net-editor-dt/css/editor.dataTables.min.css";
 import "datatables.net-select-dt/css/select.dataTables.min.css";
 import "datatables.net-buttons-dt/css/buttons.dataTables.min.css";
 const $ = require("jquery");
