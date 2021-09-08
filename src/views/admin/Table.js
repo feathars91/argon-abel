@@ -1,8 +1,19 @@
 import "./datatables.css";
 import React, { Component } from "react";
 import axios from "axios";
+
+import "datatables.net-dt/css/jquery.dataTables.min.css";
+import "datatables.net-editor-dt/css/editor.dataTables.min.css";
+import "datatables.net-select-dt/css/select.dataTables.min.css";
+import "datatables.net-buttons-dt/css/buttons.dataTables.min.css";
 const $ = require("jquery");
 $.Datatable = require("datatables.net");
+
+require("datatables.net");
+require("datatables.net-buttons");
+require("datatables.net-buttons/js/buttons.print.min.js");
+require("datatables.net-select");
+require("datatables.net-editor");
 
 export class Tbl extends Component {
   constructor(props) {
@@ -15,11 +26,12 @@ export class Tbl extends Component {
 
   //option 1
   async getUsersData() {
-    const res = await axios.get("https://6ewrylky9f.execute-api.us-east-2.amazonaws.com/dev/getcontacts");
-  //const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+    const res = await axios.get(
+      "https://6ewrylky9f.execute-api.us-east-2.amazonaws.com/dev/getcontacts"
+    );
+    //const res = await axios.get("https://jsonplaceholder.typicode.com/users");
     console.log(res.data);
     this.setState({ loading: false, users: res.data.data });
-    
   }
 
   //option 2
@@ -32,14 +44,41 @@ export class Tbl extends Component {
     this.getUsersData().then(() => this.sync());
   }
 
+
   sync() {
     this.$el = $(this.el);
+    var editor;
+    this.editor = new $.fn.dataTable.Editor({
+      table: this.$el,
+      //ajax: "https://6ewrylky9f.execute-api.us-east-2.amazonaws.com/dev/getcontacts",
+      
+      fields: [
+        {
+          label: "Name:",
+          name: "name",
+        },
+        {
+          label: "E-mail:",
+          name: "email",
+        },
+      ],
+    });
     this.$el.DataTable({
+      dom: "Blrtip",
       data: this.state.users, //option 1
       // data: this.getUsersData1(), //option 2
       columns: [
         { title: "Name", data: "name" },
         { title: "E-mail", data: "email" },
+      ],
+      select: {
+        style: "os",
+        selector: "td:first-child",
+      },
+      buttons: [
+        { extend: "create", editor: this.editor },
+        { extend: "edit", editor: this.editor },
+        { extend: "remove", editor: this.editor },
       ],
     });
   }
