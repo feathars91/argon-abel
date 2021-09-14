@@ -49,6 +49,7 @@ export class Tbl extends Component {
     this.$el = $(this.el);
     var editor;
     this.editor = new $.fn.dataTable.Editor({
+     // idSrc: "id",
       table: this.$el,
       //ajax: "https://6ewrylky9f.execute-api.us-east-2.amazonaws.com/dev/getcontacts",
       
@@ -64,7 +65,7 @@ export class Tbl extends Component {
       ],
     });
     this.$el.DataTable({
-      dom: "Blrtip",
+      dom: "Bfrtip",
       data: this.state.users, //option 1
       // data: this.getUsersData1(), //option 2
       columns: [
