@@ -1,26 +1,26 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-argonabel-dev-91626-authRole",
-      "UnauthRoleArn": "arn:aws:iam::755956835466:role/amplify-argonabel-dev-91626-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::755956835466:role/amplify-argonabel-dev-91626-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-argonabel-dev-91626-deployment",
-      "UnauthRoleName": "amplify-argonabel-dev-91626-unauthRole",
-      "StackName": "amplify-argonabel-dev-91626",
-      "StackId": "arn:aws:cloudformation:us-east-2:755956835466:stack/amplify-argonabel-dev-91626/33481720-0fe6-11ec-a989-06cdb3e0640a",
-      "AmplifyAppId": "d1ralcpnuqi9qd"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d1ralcpnuqi9qd",
-          "type": "cicd"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-argonabel-dev-91626-authRole",
+            "UnauthRoleArn": "arn:aws:iam::755956835466:role/amplify-argonabel-dev-91626-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::755956835466:role/amplify-argonabel-dev-91626-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-argonabel-dev-91626-deployment",
+            "UnauthRoleName": "amplify-argonabel-dev-91626-unauthRole",
+            "StackName": "amplify-argonabel-dev-91626",
+            "StackId": "arn:aws:cloudformation:us-east-2:755956835466:stack/amplify-argonabel-dev-91626/33481720-0fe6-11ec-a989-06cdb3e0640a",
+            "AmplifyAppId": "d1ralcpnuqi9qd"
+        },
+        "categories": {
+            "auth": {
+                "argonabelb07e14b9": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ralcpnuqi9qd",
+                    "type": "cicd"
+                }
+            }
         }
-      },
-      "auth": {
-        "argonabelb07e14b9": {}
-      }
     }
-  }
 }

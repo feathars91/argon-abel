@@ -1,3 +1,7 @@
+
+
+run this command all the time ---- node node_modules/datatables.net-editor/install.js ./public/Editor-1.9.6.zip
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
