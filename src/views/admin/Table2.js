@@ -60,11 +60,15 @@ export class Tbl extends Component {
         {
           label: "E-mail:",
           name: "email",
-        },
-                {
-          label: "E-mail:",
-          name: "email",
-        },
+        },{
+                label: "Images:",
+                name: "files[].id",
+                type: "uploadMany",
+                display: function ( fileId, counter ) {
+                    return '<img src="'+editor.file( 'files', fileId ).web_path+'"/>';
+                },
+                  noFileText: 'No images'
+            }
       ],
     });
     this.$el.DataTable({
